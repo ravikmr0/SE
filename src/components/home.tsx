@@ -928,7 +928,6 @@ const Home = ({ isLoggedIn = false }: HomeProps) => {
       </section>
 
       <Footer />
-      <LegalFooter />
     </div>
   );
 };
