@@ -48,12 +48,18 @@ const Header: React.FC<HeaderProps> = ({
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4">
-            <CourseDropdown />
-            <Button variant="ghost">Tutorials</Button>
+            <Button variant="ghost" onClick={() => navigate("/tutorials")}>
+              Tutorials
+            </Button>
             <Button variant="ghost" onClick={() => navigate("/mock-tests")}>
               Mock Tests
             </Button>
-            <Button variant="ghost">Notes Library</Button>
+            <Button variant="ghost" onClick={() => navigate("/courses")}>
+              Courses
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/notes-library")}>
+              Notes Library
+            </Button>
           </nav>
         </div>
 
@@ -119,10 +125,14 @@ const Header: React.FC<HeaderProps> = ({
       {isMobileMenuOpen && (
         <div className="md:hidden border-t bg-background">
           <nav className="flex flex-col p-4 space-y-4">
-            <Button variant="ghost" className="justify-start">
-              Courses
-            </Button>
-            <Button variant="ghost" className="justify-start">
+            <Button
+              variant="ghost"
+              className="justify-start"
+              onClick={() => {
+                navigate("/tutorials");
+                setIsMobileMenuOpen(false);
+              }}
+            >
               Tutorials
             </Button>
             <Button
@@ -135,7 +145,24 @@ const Header: React.FC<HeaderProps> = ({
             >
               Mock Tests
             </Button>
-            <Button variant="ghost" className="justify-start">
+            <Button
+              variant="ghost"
+              className="justify-start"
+              onClick={() => {
+                navigate("/courses");
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Courses
+            </Button>
+            <Button
+              variant="ghost"
+              className="justify-start"
+              onClick={() => {
+                navigate("/notes-library");
+                setIsMobileMenuOpen(false);
+              }}
+            >
               Notes Library
             </Button>
             {!isLoggedIn && (

@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "./navigation/Header";
+import Footer from "./Footer";
+import LegalFooter from "./LegalFooter";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -392,6 +394,425 @@ const Home = ({ isLoggedIn = false }: HomeProps) => {
         </div>
       </section>
 
+      {/* LMS Features Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Advanced Learning Management Features
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Our platform offers comprehensive tools to enhance your learning
+              experience
+            </p>
+          </div>
+
+          {/* AI-Powered Doubt Resolution - NEW FEATURE */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden mb-12"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              <div className="p-8">
+                <div className="w-16 h-16 rounded-lg bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-indigo-600 dark:text-indigo-400"
+                  >
+                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.84 6.71 2.26" />
+                    <path d="M21 3v9h-9" />
+                    <path d="M7.35 16.65a4 4 0 0 0 5.66 0" />
+                    <circle cx="9" cy="10" r="1" />
+                    <circle cx="15" cy="10" r="1" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">
+                  AI-Powered Doubt Resolution
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Get instant answers to your questions with our advanced AI
+                  assistant that understands complex exam topics and provides
+                  detailed explanations 24/7.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Instant responses to subject-specific questions</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Step-by-step problem solving assistance</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Conceptual clarifications with examples</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Available 24/7 with no waiting time</span>
+                  </li>
+                </ul>
+                <Button className="mt-6 bg-indigo-600 hover:bg-indigo-700 text-white">
+                  Try AI Assistant
+                </Button>
+              </div>
+              <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-8 flex items-center justify-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 w-full max-w-md">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex-shrink-0"></div>
+                    <div className="bg-white/20 rounded-lg p-3 text-white text-sm">
+                      <p>Can you explain the concept of fiscal deficit?</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-8 h-8 rounded-full bg-indigo-200 flex items-center justify-center flex-shrink-0">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-indigo-600"
+                      >
+                        <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.84 6.71 2.26" />
+                        <path d="M21 3v9h-9" />
+                      </svg>
+                    </div>
+                    <div className="bg-white/90 dark:bg-gray-800/90 rounded-lg p-3 text-gray-800 dark:text-white text-sm">
+                      <p>
+                        Fiscal deficit is the difference between the
+                        government's total expenditure and its total receipts
+                        excluding borrowing. It represents how much the
+                        government needs to borrow to meet its expenses.
+                      </p>
+                      <p className="mt-2">The formula is:</p>
+                      <p className="mt-1 font-medium">
+                        Fiscal Deficit = Total Expenditure - Total Receipts
+                        (excluding borrowings)
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex-shrink-0"></div>
+                    <div className="bg-white/20 rounded-lg p-3 text-white text-sm">
+                      <p>Can you give an example with numbers?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Virtual Reality Learning Environment - NEW FEATURE */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden mb-12"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-8 flex items-center justify-center order-2 md:order-1">
+                <div className="relative w-full max-w-md aspect-video rounded-xl overflow-hidden shadow-2xl">
+                  <div className="absolute inset-0 bg-black/80 flex items-center justify-center">
+                    <div className="w-full h-full relative">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-24 h-24 rounded-full border-4 border-white/30 flex items-center justify-center">
+                          <div className="w-20 h-20 rounded-full border-4 border-white/20 flex items-center justify-center">
+                            <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="text-white"
+                              >
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="flex items-center justify-between text-white/90 text-sm">
+                          <span>VR Tour: Parliament of India</span>
+                          <span>03:45</span>
+                        </div>
+                        <div className="w-full h-1 bg-white/20 rounded-full mt-2 overflow-hidden">
+                          <div className="w-1/3 h-full bg-white rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-8 order-1 md:order-2">
+                <div className="w-16 h-16 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-blue-600 dark:text-blue-400"
+                  >
+                    <path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0" />
+                    <path d="M12 8v8" />
+                    <path d="M8 12h8" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">
+                  Virtual Reality Learning Environment
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Experience immersive learning with our cutting-edge VR
+                  technology that brings historical events, scientific concepts,
+                  and geographical locations to life.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>
+                      Virtual tours of Parliament, Supreme Court, and historical
+                      sites
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>
+                      Interactive 3D models of complex scientific concepts
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>
+                      Historical events recreated in immersive environments
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>
+                      Compatible with most VR headsets and mobile devices
+                    </span>
+                  </li>
+                </ul>
+                <Button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white">
+                  Explore VR Content
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden"
+            >
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center mb-4">
+                  <Target className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">
+                  Personalized Learning Paths
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  AI-powered learning paths tailored to your strengths and
+                  weaknesses, ensuring efficient preparation.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Adaptive question difficulty</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Progress tracking dashboard</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Personalized study schedules</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden"
+            >
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">
+                  Interactive Live Classes
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Engage with expert faculty in real-time interactive sessions
+                  with Q&A and collaborative learning.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>HD video streaming</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Interactive polls and quizzes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Recorded sessions for revision</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden"
+            >
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-green-100 dark:bg-green-900/50 flex items-center justify-center mb-4">
+                  <Sparkles className="h-6 w-6 text-green-600 dark:text-green-400" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Advanced Analytics</h3>
+                <p className="text-muted-foreground mb-4">
+                  Comprehensive performance analytics to identify strengths and
+                  areas for improvement.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Topic-wise performance analysis</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Comparative percentile ranking</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Time management insights</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden"
+            >
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center mb-4">
+                  <BookOpen className="h-6 w-6 text-amber-600 dark:text-amber-400" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">
+                  Digital Library & Resources
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Access a vast collection of study materials, e-books, and
+                  reference guides anytime, anywhere.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>10,000+ e-books and PDFs</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Searchable content database</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Offline reading capability</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden"
+            >
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-red-100 dark:bg-red-900/50 flex items-center justify-center mb-4">
+                  <TestTube className="h-6 w-6 text-red-600 dark:text-red-400" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">
+                  Exam Simulation Environment
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Practice in an environment that mimics the actual exam
+                  interface and conditions.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Realistic exam interface</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Timer and stress management tools</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span>Detailed solution explanations</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              Explore All Features
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-20 bg-accent">
         <div className="container mx-auto px-4">
@@ -506,107 +927,8 @@ const Home = ({ isLoggedIn = false }: HomeProps) => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-background border-t">
-        <div className="container mx-auto px-4 py-12">
-          {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            {/* Company Info */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <img src="/sigmaedify.svg" alt="Logo" className="h-8 w-8" />
-                <span className="font-bold text-xl">Sigma Edify</span>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                Empowering aspirants to achieve their dreams through
-                comprehensive exam preparation.
-              </p>
-              <div className="flex space-x-4">
-                {socialLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                {quickLinks.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Popular Exams */}
-            <div>
-              <h3 className="font-semibold mb-4">Popular Exams</h3>
-              <ul className="space-y-2">
-                {popularExams.map((exam) => (
-                  <li key={exam.name}>
-                    <a
-                      href={exam.href}
-                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    >
-                      {exam.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h3 className="font-semibold mb-4">Contact Us</h3>
-              <ul className="space-y-3">
-                {contactInfo.map((info) => (
-                  <li key={info.label} className="flex items-start space-x-3">
-                    <span className="text-primary mt-0.5">{info.icon}</span>
-                    <span className="text-muted-foreground text-sm">
-                      {info.label}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="border-t pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} Sigma Edify. All rights reserved.
-              </p>
-              <div className="flex space-x-6">
-                {legalLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
+      <LegalFooter />
     </div>
   );
 };
