@@ -536,19 +536,19 @@ const Home = ({ isLoggedIn = false }: HomeProps) => {
                     poster="https://images.unsplash.com/photo-1616587894289-86480e533129?w=800&q=80"
                   >
                     <source
-                      src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                      src="/public/videos/sigmaedify.mp4"
                       type="video/mp4"
                     />
                     <source
-                      src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.webm"
-                      type="video/webm"
+                      src="/public/videos/sigmaedify.mp4"
+                      type="video/mp4"
                     />
                     Your browser does not support the video tag.
                   </video>
                   <div className="absolute bottom-4 left-4 right-4 z-10">
                     <div className="flex items-center justify-between text-white/90 text-sm">
                       <span className="bg-black/50 px-2 py-1 rounded">
-                        // VR Tour: Parliament of India
+                        
                       </span>
                       <span className="bg-black/50 px-2 py-1 rounded">
                         03:45
