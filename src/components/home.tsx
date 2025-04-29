@@ -527,39 +527,32 @@ const Home = ({ isLoggedIn = false }: HomeProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
               <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-8 flex items-center justify-center order-2 md:order-1">
                 <div className="relative w-full max-w-md aspect-video rounded-xl overflow-hidden shadow-2xl">
-                  <div className="absolute inset-0 bg-black/80 flex items-center justify-center">
-                    <div className="w-full h-full relative">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-24 h-24 rounded-full border-4 border-white/30 flex items-center justify-center">
-                          <div className="w-20 h-20 rounded-full border-4 border-white/20 flex items-center justify-center">
-                            <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="32"
-                                height="32"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="text-white"
-                              >
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <div className="flex items-center justify-between text-white/90 text-sm">
-                          <span>VR Tour: Parliament of India</span>
-                          <span>03:45</span>
-                        </div>
-                        <div className="w-full h-1 bg-white/20 rounded-full mt-2 overflow-hidden">
-                          <div className="w-1/3 h-full bg-white rounded-full"></div>
-                        </div>
-                      </div>
+                  <video
+                    className="w-full h-full object-cover"
+                    controls
+                    autoPlay
+                    muted
+                    playsInline
+                    poster="https://images.unsplash.com/photo-1616587894289-86480e533129?w=800&q=80"
+                  >
+                    <source
+                      src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                      type="video/mp4"
+                    />
+                    <source
+                      src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.webm"
+                      type="video/webm"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="absolute bottom-4 left-4 right-4 z-10">
+                    <div className="flex items-center justify-between text-white/90 text-sm">
+                      <span className="bg-black/50 px-2 py-1 rounded">
+                        // VR Tour: Parliament of India
+                      </span>
+                      <span className="bg-black/50 px-2 py-1 rounded">
+                        03:45
+                      </span>
                     </div>
                   </div>
                 </div>
