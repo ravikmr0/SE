@@ -50,7 +50,7 @@ const notes: Note[] = [
     date: "2023-12-15",
     fileSize: "12.5 MB",
     featured: true,
-    href: "https://sigmaedify.com/",
+    
   },
   {
     id: "upsc-gs-2",
@@ -406,7 +406,7 @@ const NotesLibrary: React.FC = () => {
           </div>
         )}
 
-        {/* All Notes */}
+        {/* All Notes  // All notes section with tabs for filtering by exam type */}
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-6">All Study Notes</h2>
 
