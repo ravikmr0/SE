@@ -50,6 +50,7 @@ const notes: Note[] = [
     date: "2023-12-15",
     fileSize: "12.5 MB",
     featured: true,
+    href: "https://sigmaedify.com/",
   },
   {
     id: "upsc-gs-2",
